@@ -1,3 +1,7 @@
+resource "azurerm_resource_group" "project" {
+  name     = var.resource_group_name
+  location = var.location
+}
 resource "azurerm_virtual_network" "wordpress" {
   name                = "wordpress-vnet"
   address_space       = var.cidr_block

@@ -47,4 +47,4 @@ resource "azurerm_traffic_manager_profile" "traffic_manager" {
     relative_name = "my-traffic-manager"
     ttl           = 60
   }
-}x
+}

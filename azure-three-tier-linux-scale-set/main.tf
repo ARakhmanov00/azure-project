@@ -38,7 +38,7 @@ resource "azurerm_traffic_manager_profile" "traffic_manager" {
   traffic_routing_method = "Performance"
 
   monitor_config {
-    protocol = "http"
+    protocol = "HTTP"
     port     = 80
     path     = "/"
   }

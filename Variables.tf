@@ -72,3 +72,13 @@ variable "sec_group" {
   description = "Enter Security Group name"
   default     = "wordpress_sec_group"
 }
+
+variable "access_key" {
+  description = "Provide Acess Key for AWS"
+  default     = "AKIA3HSBUZG4TOBQARDZ"
+}
+
+variable "secret_key" {
+  description = "Provide Secret Key for AWS"
+  default     = "YeV5BDsEpe8+iIzwZ4sZDco4wssXdCCzDZm5Tqnl"
+}

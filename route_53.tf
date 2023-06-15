@@ -1,7 +1,7 @@
 provider "aws" {
     region = "us-east-2"
-    access_key= "AKIA3HSBUZG4TOBQARDZ"
-    secret_key= "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"
+    access_key= var.access_key
+    secret_key= var.secret_key
 }
 
 resource "aws_route53_record" "wordpress" {

@@ -33,4 +33,11 @@ resource "azurerm_linux_virtual_machine_scale_set" "wordpress" {
   }
 
   tags = var.tags
+
+  network_security_group {
+    name                = var.se
+    primary             = true
+    network_interface_ids = [azurerm_network_interface.example.id]
+  }
+
 }

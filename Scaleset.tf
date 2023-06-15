@@ -31,9 +31,6 @@ resource "azurerm_linux_virtual_machine_scale_set" "wordpress" {
       primary                                = true
     }
   }
- network_security_group {
-    name                = var.sec_group
-    primary             = true
-  }
+  
   tags = var.tags
 }

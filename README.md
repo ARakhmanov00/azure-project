@@ -171,7 +171,7 @@ resource "azurerm_public_ip" "wordpress" {
 # LB.tf & Scaleset.tf  
 In LB.tf & Scaleset.tf files we used below resources: 
 resource "azurerm_lb" "example" https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/lb_rule
-When setting up an Azure Load Balancer, you configure a health probe that your load balancer can use to determine if your instance is healthy.
+When setting up an Azure Load Balancer, you configure a health probe that your load balancer can use to determine if your instances are healthy.
 Use resource "resource "azurerm_lb_rule" "example"  to create load balancer Rule 
 
 The backend pool is a critical component of the load balancer. The backend pool defines the group of resources that will serve traffic for a given load-balancing rule.
@@ -222,7 +222,7 @@ resource "azurerm_linux_virtual_machine_scale_set" "wordpress" {
   location                        = var.location
   resource_group_name             = azurerm_resource_group.wordpress.name
   sku                             = "Standard_D2S_v3"
-  instances                       = 1
+  instances                       = 2
   admin_username                  = var.admin_username
   admin_password                  = var.admin_password
   disable_password_authentication = false

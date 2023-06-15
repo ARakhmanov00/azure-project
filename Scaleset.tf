@@ -26,7 +26,7 @@ resource "azurerm_linux_virtual_machine_scale_set" "wordpress" {
 
     ip_configuration {
       name                                   = "IPConfiguration"
-      subnet_id                              = azurerm_subnet.wordpress.id
+      subnet_id                              = azurerm_subnet.public-wordpress1.id
       load_balancer_backend_address_pool_ids = [azurerm_lb_backend_address_pool.bpepool.id]
       primary                                = true
     }

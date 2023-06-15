@@ -6,8 +6,22 @@ resource "azurerm_virtual_network" "wordpress" {
   tags                = var.tags
 }
 
-resource "azurerm_subnet" "wordpress" {
-  name                 = "wordpress-subnet"
+resource "azurerm_subnet" "public-wordpress1" {
+  name                 = "public-wordpress1"
+  resource_group_name  = azurerm_resource_group.wordpress.name
+  virtual_network_name = azurerm_virtual_network.wordpress.name
+  address_prefixes     = var.subnet_address
+}
+
+resource "azurerm_subnet" "public-wordpress2" {
+  name                 = "public-wordpress2"
+  resource_group_name  = azurerm_resource_group.wordpress.name
+  virtual_network_name = azurerm_virtual_network.wordpress.name
+  address_prefixes     = var.subnet_address
+}
+
+resource "azurerm_subnet" "public-wordpress3" {
+  name                 = "public-wordpress3"
   resource_group_name  = azurerm_resource_group.wordpress.name
   virtual_network_name = azurerm_virtual_network.wordpress.name
   address_prefixes     = var.subnet_address

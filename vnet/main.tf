@@ -14,19 +14,19 @@ resource "azurerm_subnet" "public1" {
   name                 = var.subnet_names[0]
   resource_group_name  = azurerm_resource_group.project.name
   virtual_network_name = azurerm_virtual_network.project.name
-  address_prefixes     = var.subnet_address_prefixes[0]
+  address_prefixes     = var.subnet_cidrs[0]
 }
 
 resource "azurerm_subnet" "public2" {
   name                 = var.subnet_names[1]
   resource_group_name  = azurerm_resource_group.project.name
   virtual_network_name = azurerm_virtual_network.project.name
-  address_prefixes     = var.subnet_address_prefixes[1]
+  address_prefixes     = var.subnet_cidrs[1]
 }
 
 resource "azurerm_subnet" "public3" {
   name                 = var.subnet_names[2]
   resource_group_name  = azurerm_resource_group.project.name
   virtual_network_name = azurerm_virtual_network.project.name
-  address_prefixes     = var.subnet_address_prefixes[2]
+  address_prefixes     = var.subnet_cidrs[2]
 }

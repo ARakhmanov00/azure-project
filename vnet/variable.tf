@@ -28,7 +28,7 @@ variable "subnet_names" {
   default     = ["public1", "public2", "public3"]
 }
 
-variable "subnet_address_prefixes" {
+variable "subnet_cidrs" {
   description = "Address prefixes for the subnets"
   type        = list(string)
   default     = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]

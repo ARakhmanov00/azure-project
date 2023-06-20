@@ -1,9 +1,3 @@
-provider "aws" {
-    region = "us-east-2"
-    access_key= var.access_key
-    secret_key= var.secret_key
-}
-
 resource "aws_route53_record" "wordpress" {
   zone_id = "Z10280403S2MA8C5S7FIA"
   name    = "blog.devops00.com"

@@ -75,10 +75,10 @@ variable "sec_group" {
 
 variable "access_key" {
   description = "Provide Acess Key for AWS"
-  default     = "AKIA3HSBUZG4TOBQARDZ"
+  default     = "AKIA3HSBUZG4ZSJXNZGX"
 }
 
 variable "secret_key" {
   description = "Provide Secret Key for AWS"
-  default     = "YeV5BDsEpe8+iIzwZ4sZDco4wssXdCCzDZm5Tqnl"
+  default     = "dIqB8VCQf6gjM10KQTW9EMVlJSxtBgIhGiazxkkX"
 }
